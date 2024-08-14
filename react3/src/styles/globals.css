@@ -1,0 +1,8 @@
+.check {
+  display: flex;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+}
