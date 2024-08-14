@@ -23,7 +23,7 @@ export default function Home() {
 
       <div className="task-list">
         {tasks.map((task, index) => (
-          <h1 key={index}>{task}</h1>
+          <h3 key={index}>{task}</h3>
         ))}
       </div>
     </div>
