@@ -9,14 +9,12 @@ export default function Home() {
   const [tasks, setTasks] = useState([]);
 
   const handleAddTask = () => {
-    if (text.trim()) {
-      setTasks([...tasks, text]);
-      setText("");
-    }
+    setTasks([...tasks, text]);
+    setText("");
   };
 
   const handleIconClick = (index) => {
-    setTasks(tasks.filter((_, i) => i !== index));
+    setTasks(tasks.filter((_, id) => id !== index));
   };
 
   return (
