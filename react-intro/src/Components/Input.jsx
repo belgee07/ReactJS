@@ -5,7 +5,12 @@ export const Input = ({ placeholder, value, onChange }) => {
 
   return (
     <div>
-      <input placeholder={placeholder} value={value} onChange={handleChange} />
+      <input
+        className="input"
+        placeholder={placeholder}
+        value={value}
+        onChange={handleChange}
+      />
     </div>
   );
 };
