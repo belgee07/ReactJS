@@ -2,7 +2,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000000;
+  /* background-color: #000000; */
   height: 100vh;
 }
 
@@ -34,7 +34,7 @@ body {
   width: 250px;
 }
 
-.task-lists {
+.lists {
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -51,6 +51,7 @@ body {
   padding: 3px;
   align-items: center;
   border: 1px solid red;
+  height: 50px;
   border-radius: 8px;
   width: 350px;
 }
@@ -58,4 +59,35 @@ body {
 .rightSides {
   display: flex;
   gap: 10px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rights {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
 }
