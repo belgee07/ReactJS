@@ -25,6 +25,14 @@ const db = {
     username: "Jambaa",
     nickname: "Nigga",
   },
+  tsovoo: {
+    profilePic:
+      "https://scontent.fuln2-2.fna.fbcdn.net/v/t39.30808-1/457148603_1675982349832527_6958497769675408450_n.jpg?stp=cp6_dst-jpg_s480x480&_nc_cat=111&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=HvYK49hHm2MQ7kNvgEriHoS&_nc_ht=scontent.fuln2-2.fna&_nc_gid=AvjD5YTpUenb391aKBUDFN5&oh=00_AYBf7qpFpoFMG-Ax7CL0GJplnStV9EdKpYYjDkYjUVpBpg&oe=66D2F452",
+    coverPic:
+      "https://scontent.fuln2-2.fna.fbcdn.net/v/t39.30808-6/319036487_1313076939456405_7208815534923367231_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=SLtsP3NunaAQ7kNvgFQ3LnV&_nc_ht=scontent.fuln2-2.fna&oh=00_AYCr7eDvEKpWYW5BuZiagKyponx5uf_fBjyvxM9GPoUXYw&oe=66D30D0D",
+    username: "Tsovoo",
+    nickname: "Ganbold",
+  },
 };
 
 const Board = ({ params }) => {
