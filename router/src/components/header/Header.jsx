@@ -18,23 +18,29 @@ export const Header = () => {
   ];
 
   return (
-    <div className="flex justify-center items-center w-full h-[100px] py-8 gap-[310px] ">
-      <div className="flex w-[158px] h-[36px] items-center gap-1">
-        <img src="./Union.png" alt="" />
-        <div>Meta</div>
-        <div className="font-bold">Blog</div>
+    <header className="w-[1100px] h-[100px] mx-auto py-4 px-6 bg-white">
+      <div className="flex flex-wrap justify-between items-center h-full">
+        <div className="flex items-center gap-2">
+          <img src="./Union.png" alt="Logo" className="w-10 h-10" />
+          <div className="text-lg font-semibold">Meta</div>
+          <div className="text-lg font-bold hidden md:block">Blog</div>
+        </div>
+        <nav className="flex gap-6 md:gap-10">
+          {routers.map(({ href, title }) => (
+            <Link href={href} key={title} className="text-base hover:underline">
+              {title}
+            </Link>
+          ))}
+        </nav>
+        <div className="flex items-center gap-2 bg-gray-100 rounded-md p-2">
+          <input
+            placeholder="Search"
+            className="bg-gray-100 border-none focus:outline-none"
+            type="search"
+          />
+          <IoIosSearch className="text-lg" />
+        </div>
       </div>
-      <div className="h-[24px] flex gap-10">
-        {routers.map(({ href, title }) => (
-          <Link href={href} key={title}>
-            {title}
-          </Link>
-        ))}
-      </div>
-      <div className="flex items-center pr-2 py-2 pl-4 bg-zinc-100 rounded-md">
-        <input placeholder="Search" className="bg-zinc-100" type="search" />
-        <IoIosSearch />
-      </div>
-    </div>
+    </header>
   );
 };
