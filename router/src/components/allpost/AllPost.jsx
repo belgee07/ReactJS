@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 
 export const AllPost = ({ posts }) => {
@@ -31,8 +32,9 @@ export const AllPost = ({ posts }) => {
       <div className="flex flex-wrap  gap-9">
         {posts
           .slice(0, visiblePosts)
-          .map(({ cover_image, title, tags, published_at }, index) => (
-            <div
+          .map(({ cover_image, title, tags, published_at, id }, index) => (
+            <Link
+              href={"/single/" + id}
               key={index}
               className="w-[360px] flex flex-col h-[400px] border border-gray-300 p-4 rounded-lg justify-between "
             >
@@ -41,10 +43,10 @@ export const AllPost = ({ posts }) => {
                 className="h-[240px] w-full object-cover mb-2 rounded-lg"
                 alt={title || "Blog cover"}
               />
-              <div className="font-semibold">{title}</div>
+              <div className="text-2xl">{title}</div>
               <div className="text-sm text-gray-600">{tags}</div>
               <div className="text-xs text-gray-400">{published_at}</div>
-            </div>
+            </Link>
           ))}
       </div>
       <div className="flex justify-center items-center">

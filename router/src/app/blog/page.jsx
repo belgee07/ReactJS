@@ -1,7 +1,12 @@
-import React from "react";
+import { Bloggers } from "@/components";
 
-const Blog = () => {
-  return <div>Blog</div>;
-};
+export default async function Home() {
+  const result = await fetch("https://dev.to/api/articles");
+  const posts = await result.json();
 
-export default Blog;
+  return (
+    <div className="flex flex-col gap-[100px] w-[1152px] justify-center items-center">
+      <Bloggers posts={posts} />
+    </div>
+  );
+}
