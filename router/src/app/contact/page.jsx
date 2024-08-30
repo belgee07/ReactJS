@@ -1,7 +1,9 @@
-import React from "react";
+import { Contact } from "@/components";
 
-const Contact = () => {
-  return <div>Contact</div>;
-};
-
-export default Contact;
+export default function Home() {
+  return (
+    <div>
+      <Contact />
+    </div>
+  );
+}

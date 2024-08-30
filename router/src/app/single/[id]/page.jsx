@@ -1,5 +1,5 @@
 "use client";
-import { SinglePost } from "@/components/single-post";
+import { SinglePost } from "@/components";
 import { useParams } from "next/navigation";
 
 export default async function Home() {
@@ -9,8 +9,8 @@ export default async function Home() {
   const posts = await result.json();
 
   return (
-    <div className="flex flex-col gap-[100px] w-[1152px] justify-center items-center">
-      <SinglePost posts={posts} />
+    <div className="flex flex-col justify-center items-center">
+      <SinglePost data={posts} />
     </div>
   );
 }
