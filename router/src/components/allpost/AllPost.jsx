@@ -21,12 +21,20 @@ export const AllPost = ({ posts }) => {
   return (
     <div className="flex flex-col gap-10">
       <p className="text-2xl font-bold">All Blog Posts</p>
-      <div className="flex gap-10 text-xs">
-        {informations.map(({ title }, index) => (
-          <p key={index} className="cursor-pointer hover:text-blue-500">
-            {title}
-          </p>
-        ))}
+      <div className="flex justify-between">
+        <div className="flex gap-10 text-xs">
+          {informations.map(({ title }, index) => (
+            <p key={index} className="cursor-pointer hover:text-blue-500">
+              {title}
+            </p>
+          ))}
+        </div>
+        <div
+          className="text-xs hover:text-blue-500 cursor-pointer"
+          onClick={() => setVisiblePosts(posts.length)}
+        >
+          View all
+        </div>
       </div>
 
       <div className="flex flex-wrap  gap-9">
