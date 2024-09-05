@@ -2,3 +2,8 @@ export * from "./header";
 export * from "./footer";
 export * from "./hero";
 export * from "./products";
+export * from "./categories";
+export * from "./month";
+export * from "./our_products";
+export * from "./featured";
+export * from "./advantage";

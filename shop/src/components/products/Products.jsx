@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { FaRegHeart } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
 
-const Products = ({ products = [] }) => {
+const Products = ({ products }) => {
   const sliderRef = useRef(0);
 
   const settings = {
@@ -45,7 +45,7 @@ const Products = ({ products = [] }) => {
   };
 
   return (
-    <div className="flex w-full max-w-[1170px] flex-col gap-6">
+    <div className="flex w-full max-w-[1170px] flex-col gap-9">
       <div className="flex items-center gap-4">
         <div className="w-5 h-10 bg-red-600 rounded"></div>
         <div className="text-red-600">Today's</div>
@@ -76,7 +76,7 @@ const Products = ({ products = [] }) => {
               key={id}
               className="relative h-[300px] max-w-[270px] border rounded-lg"
             >
-              <div className="flex justify-center items-center w-full h-[300px] bg-neutral-100">
+              <div className="flex justify-center items-center w-full h-[240px] bg-neutral-100">
                 <img
                   className="w-[180px] h-[190px] "
                   src={image}
