@@ -11,7 +11,7 @@ export const Background = () => {
             alt="Scenic view 1"
           />
           <div className="absolute left-0 bottom-0 p-6 text-white bg-gradient-to-t from-black via-transparent to-transparent">
-            <p className="text-xl font-semibold">Apple</p>
+            <p className="text-xl font-semibold">Iphone 14</p>
             <p className="mt-2 text-5xl">Up to 10% off Voucher</p>
             <p className="mt-4 font-semibold underline cursor-pointer">
               Shop now
@@ -25,7 +25,7 @@ export const Background = () => {
             alt="Scenic view 2"
           />
           <div className="absolute left-0 bottom-0 p-6 text-white bg-gradient-to-t from-black via-transparent to-transparent">
-            <p className="text-xl font-semibold">Apple</p>
+            <p className="text-xl font-semibold">Airpods Max</p>
             <p className="mt-2 text-5xl">Up to 10% off Voucher</p>
             <p className="mt-4 font-semibold underline cursor-pointer">
               Shop now
@@ -39,7 +39,7 @@ export const Background = () => {
             alt="Scenic view 3"
           />
           <div className="absolute left-0 bottom-0 p-6 text-white bg-gradient-to-t from-black via-transparent to-transparent">
-            <p className="text-xl font-semibold">Apple</p>
+            <p className="text-xl font-semibold">Ipad Pro</p>
             <p className="mt-2 text-5xl">Up to 10% off Voucher</p>
             <p className="mt-4 font-semibold underline cursor-pointer">
               Shop now
@@ -53,7 +53,7 @@ export const Background = () => {
             alt="Scenic view 4"
           />
           <div className="absolute left-0 bottom-0 p-6 text-white bg-gradient-to-t from-black via-transparent to-transparent">
-            <p className="text-xl font-semibold">Apple</p>
+            <p className="text-xl font-semibold">Airpos Pro</p>
             <p className="mt-2 text-5xl">Up to 10% off Voucher</p>
             <p className="mt-4 font-semibold underline cursor-pointer">
               Shop now
