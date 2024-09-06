@@ -7,3 +7,4 @@ export * from "./month";
 export * from "./our_products";
 export * from "./featured";
 export * from "./advantage";
+export * from "./all_product";

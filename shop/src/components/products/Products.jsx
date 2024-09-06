@@ -5,9 +5,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaRegHeart } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
+import Link from "next/link";
+import { Timer } from "./Timer";
 
-const Products = ({ products }) => {
-  const sliderRef = useRef(0);
+export const Products = ({ products }) => {
+  const sliderRef = useRef(null);
 
   const settings = {
     arrows: false,
@@ -15,33 +17,6 @@ const Products = ({ products }) => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
-  const handleViewAllClick = () => {
-    handleViewAllClick.length;
   };
 
   return (
@@ -50,8 +25,12 @@ const Products = ({ products }) => {
         <div className="w-5 h-10 bg-red-600 rounded"></div>
         <div className="text-red-600">Today's</div>
       </div>
-      <div className="flex justify-between w-full">
-        <div className="text-4xl font-semibold">Fresh Sales</div>
+      <div className="flex justify-between items-center w-full">
+        <div className="flex gap-[87px] items-center">
+          <div className="text-4xl font-semibold">Fresh Sales</div>
+          <Timer />
+        </div>
+
         <div className="flex gap-2">
           <button
             onClick={() => sliderRef.current.slickPrev()}
@@ -78,7 +57,7 @@ const Products = ({ products }) => {
             >
               <div className="flex justify-center items-center w-full h-[240px] bg-neutral-100">
                 <img
-                  className="w-[180px] h-[190px] "
+                  className="w-[180px] h-[190px]"
                   src={image}
                   alt={`Image of ${title}`}
                 />
@@ -100,18 +79,15 @@ const Products = ({ products }) => {
           ))}
         </Slider>
 
-        <div className="flex justify-center items-center">
-          <button
-            onClick={handleViewAllClick}
-            className="bg-red-600 text-white rounded py-4 px-12"
-          >
-            View All Products
-          </button>
-        </div>
+        <Link href="/all" className="flex w-full max-w-[1170px] flex-col gap-9">
+          <div className="flex justify-center items-center">
+            <button className="bg-red-600 text-white rounded py-4 px-12">
+              View All Products
+            </button>
+          </div>
+        </Link>
       </div>
       <div className="w-full border-t bg-slate-400"></div>
     </div>
   );
 };
-
-export default Products;

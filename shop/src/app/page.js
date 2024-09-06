@@ -1,9 +1,12 @@
-import { Advantage, Hero } from "@/components";
-import Categories from "@/components/categories/Categories";
-import Featured from "@/components/featured/Featured";
-import Month from "@/components/month/Month";
-import OurProducts from "@/components/our_products/OurProducts";
-import Products from "@/components/products/Products";
+import {
+  Advantage,
+  Hero,
+  Categories,
+  Featured,
+  Month,
+  OurProducts,
+  Products,
+} from "@/components";
 
 export default async function Home() {
   const result = await fetch("https://fakestoreapi.com/products");

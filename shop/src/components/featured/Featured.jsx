@@ -1,4 +1,4 @@
-const Featured = () => {
+export const Featured = () => {
   return (
     <div className="flex flex-col gap-9 p-4 max-w-[1170px] w-full">
       <div className="flex items-center gap-4">
@@ -90,5 +90,3 @@ const Featured = () => {
     </div>
   );
 };
-
-export default Featured;

@@ -5,8 +5,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaRegHeart } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
+import { Background1 } from "./Background1";
 
-const Month = ({ products }) => {
+export const Month = ({ products }) => {
   const sliderRef = useRef(null);
 
   const settings = {
@@ -84,8 +85,7 @@ const Month = ({ products }) => {
           </Slider>
         </div>
       </div>
-      <img src="./back.png" alt="" />
+      <Background1 />
     </div>
   );
 };
-export default Month;

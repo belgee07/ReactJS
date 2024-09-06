@@ -1,9 +1,10 @@
 import React from "react";
 import { MdNavigateNext } from "react-icons/md";
+import { Background } from "./Background";
 
 export const Hero = () => {
   return (
-    <div className="flex  w-full justify-center gap-8 ">
+    <div className="flex  w-full max-w-[1170px] justify-center gap-8 ">
       <div className="pt-10 w-[217px] flex flex-col gap-4">
         <div className="flex items-center justify-between">
           <p>Woman's fashion</p>
@@ -24,7 +25,7 @@ export const Hero = () => {
 
       <div className="border-r border-gray-300"></div>
 
-      <img className="pt-10 max-w-full" src="./main.png" alt="" />
+      <Background />
     </div>
   );
 };

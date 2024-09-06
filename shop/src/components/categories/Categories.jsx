@@ -5,7 +5,7 @@ import { LuCamera } from "react-icons/lu";
 import { FiHeadphones } from "react-icons/fi";
 import { LuGamepad2 } from "react-icons/lu";
 
-const Categories = () => {
+export const Categories = () => {
   return (
     <div className="flex w-full max-w-[1170px] flex-col gap-6">
       <div className="flex items-center gap-4">
@@ -66,4 +66,3 @@ const Categories = () => {
     </div>
   );
 };
-export default Categories;

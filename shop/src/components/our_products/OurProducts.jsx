@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { FaRegHeart } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
 
-const OurProducts = ({ products }) => {
+export const OurProducts = ({ products }) => {
   const sliderRef = useRef(null);
   const sliderRef2 = useRef(null);
   const [visiblePosts, setVisiblePosts] = useState(4);
@@ -107,5 +107,3 @@ const OurProducts = ({ products }) => {
     </div>
   );
 };
-
-export default OurProducts;
