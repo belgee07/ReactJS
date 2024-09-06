@@ -48,12 +48,13 @@ export const Products = ({ products }) => {
           </button>
         </div>
       </div>
+
       <div className="flex flex-col gap-8">
         <Slider ref={sliderRef} {...settings}>
           {products.map(({ id, title, image, price }) => (
             <div
               key={id}
-              className="relative h-[300px] max-w-[270px] border rounded-lg"
+              className="relative h-[350px] max-w-[270px] border rounded-lg"
             >
               <div className="flex justify-center items-center w-full h-[240px] bg-neutral-100">
                 <img
@@ -66,12 +67,24 @@ export const Products = ({ products }) => {
                 <p className="w-[55px] h-[26px] bg-red-600 flex items-center justify-center text-white rounded">
                   -40%
                 </p>
-                <div className="flex flex-col gap-2 ">
-                  <FaRegHeart className="cursor-pointer" />
-                  <IoEyeOutline className="cursor-pointer" />
+                <div className="flex flex-col gap-2">
+                  <FaRegHeart
+                    className="cursor-pointer"
+                    aria-label="Add to Wishlist"
+                  />
+                  <IoEyeOutline
+                    className="cursor-pointer"
+                    aria-label="View Details"
+                  />
                 </div>
               </div>
-              <div className="w-full p-2">
+              <div className="w-full p-2 group hover:cursor-pointer">
+                <div
+                  id="a"
+                  className="bg-black justify-center items-center h-[41px] cursor-pointer hidden group-hover:flex"
+                >
+                  <p className="text-base text-white">Add to Cart</p>
+                </div>
                 <h2 className="text-base truncate">{title}</h2>
                 <p className="text-xl font-bold">${price}</p>
               </div>
@@ -79,7 +92,7 @@ export const Products = ({ products }) => {
           ))}
         </Slider>
 
-        <Link href="/all" className="flex w-full max-w-[1170px] flex-col gap-9">
+        <Link href="/all">
           <div className="flex justify-center items-center">
             <button className="bg-red-600 text-white rounded py-4 px-12">
               View All Products
