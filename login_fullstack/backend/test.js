@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from "uuid";
 
 app.post("/signup", async (req, res) => {
   const { password, email } = req.body;
-  const resultJson = await readFileSync("./db.json", "utf-8");
+  const resultJson = await fs.readFileSync("./db.json", "utf-8");
   const result = JSON.parse(resultJson);
 
   const userFound = result.signup.find((el) => el.email === email);

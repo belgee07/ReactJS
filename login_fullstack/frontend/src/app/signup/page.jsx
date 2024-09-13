@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import axios from "axios";
 
 const Page = () => {
   const [userDetail, setUserDetail] = useState({});
@@ -11,15 +12,32 @@ const Page = () => {
     setUserDetail({ ...userDetail, [name]: value });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    router.push("/login");
-    console.log(userDetail);
+    try {
+      const response = await axios.post("http://localhost:8000/user", {
+        email: userDetail.email,
+        password: userDetail.password,
+      });
+      console.log(response);
+
+      alert("Burtgel amjilttai");
+      router.push("/login");
+    } catch (error) {
+      console.log(error);
+      alert(error.response.data);
+    }
+
+    // console.log(userDetail);
   };
 
   return (
-    <div className="flex justify-center py-10">
-      <form onSubmit={handleSubmit}>
+    <div className="flex flex-col justify-center items-center gap-2 p-20">
+      <h1 className="text-2xl flex justify-start">Sign up Page</h1>
+      <form
+        className="flex flex-col gap-4 border border-cyan-400 p-5 bg-slate-400"
+        onSubmit={handleSubmit}
+      >
         <input
           type="text"
           className="border"

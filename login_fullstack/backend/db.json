@@ -1,0 +1,14 @@
+{
+  "users": [
+    { "email": "bebe", "password": "1234" },
+    { "email": "uuuu", "password": "9876" },
+    { "email": "asd", "password": "wdwdwdwd" },
+    { "email": "a", "password": "a" },
+    { "email": "s", "password": "s" },
+    { "email": "sasasd", "password": "s" },
+    { "email": "adasdasas", "password": "asdsadsa" },
+    { "email": "awqeqweq", "password": "sadsad" },
+    { "email": "wqeqweqw", "password": "qweqwe" },
+    {}
+  ]
+}
