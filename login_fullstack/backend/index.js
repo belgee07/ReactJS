@@ -1,5 +1,6 @@
 import express from "express";
 import bcrypt from "bcryptjs";
+import { writeFileSync } from "fs";
 
 const app = express();
 
@@ -11,10 +12,10 @@ app.post("/sign-up", async (req, res) => {
   const hashedPassword = bcrypt.hashSync(password, 10);
   console.log(hashedPassword);
 
-  // writeFileSync(
-  //   "/db.json",
-  //   JSON.stringify({ username, password: hashedPassword })
-  // );
+  writeFileSync(
+    "/db.json",
+    JSON.stringify({ username, password: hashedPassword })
+  );
 
   res.status(200).send("Success");
 });
